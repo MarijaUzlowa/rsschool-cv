@@ -47,3 +47,17 @@ I am 24 years old. Completed a master's degree in IT specialization. I want to d
 * Time-management
 * Engineering, analytical, creative thinking
 * Sociability
+
+## Code Example
+***
+I haven't solved a single problem yet, I used this task that I need to solve when registering on Codewars.
+```
+function multiply(a, b){
+return a * b;
+}
+```
+## Languages
+***
+1. Ukrainian ******
+2. Russian ******
+3. English **
