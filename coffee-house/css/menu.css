@@ -1,0 +1,351 @@
+:root {
+    --background-body: #E1D4C9;
+    --background-container: #665F55;
+    --text-accent: #B0907A;
+    --text-light: #E1D4C9;
+    --text-dark: #403F3D;
+    --border-light: #C1B6AD;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 1440px;
+    margin: 0 auto;
+    background-color: var(--background-body);
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    padding: 0 40px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+h1,
+h2,
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.accent {
+    color: var(--text-accent);
+    font-style: italic;
+}
+
+.link {
+    color: var(--text-dark);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 4px;
+}
+
+.link::after,
+.address-link::after,
+.link-hover-menu::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--text-dark);
+    transition: width 0.5s ease;
+}
+
+.link:hover::after,
+.address-link:hover::after {
+    width: 100%;
+}
+
+.link-menu {
+    display: flex;
+    align-items: center;
+}
+
+.link-menu-text {
+    color: var(--text-dark);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+    margin-right: 8px;
+    padding-bottom: 4px;
+}
+
+.link-hover-menu {
+    position: relative;
+}
+
+.link-hover-menu::after {
+    width: 100%;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 20px 0;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    height: 60px;
+    gap: 40px;
+}
+
+.header-menu {
+    display: flex;
+    gap: 40px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.products-title {
+    color: var(--text-dark);
+    text-align: center;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 125%;
+    margin-bottom: 40px;
+}
+
+.products-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.tabs-button {
+    display: flex;
+    padding: 8px 16px 8px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 100px;
+    background: var(--background-body);
+    border: 1px solid var(--border-light);
+    cursor: pointer;
+    transition: background-color 1s ease, color 1s ease;
+}
+
+.tabs-button:hover {
+    background-color: var(--background-container);;
+    color: #e1d4c9;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--border-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabs-button:hover .circle {
+    background-color: var(--background-body);
+    transition: background-color 1s ease;
+}
+
+.circle img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 50%;
+}
+
+.button-text-tab {
+    color: var(--text-dark);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.tabs-button:hover .button-text-tab {
+    color: var(--text-light);
+    transition: color 1s ease;
+}
+
+#tabs-button {
+    background-color: var(--background-container);
+    color: var(--text-light);
+}
+
+#tabs-button .circle {
+    background-color: var(--background-body);
+}
+
+#tabs-button .button-text-tab {
+    color: var(--text-light);
+}
+
+.tab-content-coffee {
+    display: grid;
+    grid-template-columns: repeat(4, 310px);
+    gap: 40px;
+}
+
+.products-item {
+    display: flex;
+    height: 506px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 40px;
+    border: 1px solid var(--border-light);
+}
+
+.photo-container {
+    overflow: hidden;
+    position: relative;
+    border-radius: 40px;
+}
+
+.photo-menu {
+    width: 310px;
+    height: 310px;
+    flex-shrink: 0;
+    border-radius: 40px;
+    transition: transform 0.3s ease;
+}
+
+.products-item:hover .photo-menu {
+    transform: scale(1.1);
+}
+
+.products-content-text {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.space-between {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1 0 0;
+    align-self: stretch;
+    gap: 12px;
+}
+
+.products-item-title,
+.products-item-price {
+    color: var(--text-dark);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 125%;
+}
+
+.products-item-text {
+    color: var(--text-dark);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.footer {
+    margin-top: 100px;
+    padding-bottom: 40px;
+    position: relative;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    padding: 100px;
+    border-radius: 40px;
+    background-color: var(--background-container);
+    gap: 122px;
+}
+
+.footer-address {
+    padding-top: 10px;
+    display: grid;
+    font-style: normal;
+}
+
+.footer-title {
+    color: var(--text-light);
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 125%;
+    padding-bottom: 40px;
+}
+
+.contact-title {
+    color: var(--text-light);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 125%;
+    margin: 0;
+    padding-bottom: 40px;
+}
+
+.address-links {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.address-link,
+.address-link-clock {
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 4px;
+    color: var(--text-light);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.address-link::after,
+.address-link-clock::after {
+    background-color: var(--text-light);
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    border: 1px solid var(--border-light);
+    cursor: pointer;
+    transition: background-color 1s ease, color 1s ease;
+}
+
+.icon:hover {
+    background-color: var(--background-body);
+}
+
+.icon:hover svg path {
+    stroke: var(--text-dark);
+}
+
